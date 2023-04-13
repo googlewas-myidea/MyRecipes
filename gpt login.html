@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+  </head>
+  <body>
+    <h1>Login Page</h1>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+      <button type="submit">Login</button>
+    </form>
+    <script>
+      const loginForm = document.getElementById("loginForm");
+      loginForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        login();
+      });
+      
+      function login() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // check if username and password are correct
+        if (username === "a" && password === "a") {
+          // redirect to the recipe page
+          window.location.href = "recipe.html";
+        } else {
+          alert("Invalid username or password");
+        }
+      }
+    </script>
+  </body>
+</html>
